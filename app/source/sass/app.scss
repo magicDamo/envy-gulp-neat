@@ -1,21 +1,14 @@
-// Third Party Libraries
+// LIBS
 @import "bourbon/app/assets/stylesheets/bourbon";
 @import "neat/app/assets/stylesheets/neat";
-
 @import "compass";
 @import "breakpoint";
-
-// Reset - Normalize is what we use.
-//@import "reset";
-
 @import "normalize-scss/normalize";
-
-// Partial Files
+// ETC
 @import "breakpoints";
 @import "variables";
 @import "mixins";
-
-// Write your Styles below REPLACE THE BELOW STYLES
+@import "slidingpanel";
 
 html {
 	color:#fff;
@@ -37,12 +30,42 @@ html {
 			position:relative;
 			margin:0 auto;
 		}
-
+		.hero-mob{
+			display:none;
+		}
+		.hero-big{
+			display:block;
+		}
+		@include media($mobile) {
+			img {
+				max-width:100%;
+			}
+			.hero-mob{
+				display:block;
+			}
+			.hero-big{
+				display:none;
+			}
+		}
+		@include media($tablet) {
+			img {
+				width:100%;
+			}
+			.hero-mob{
+				display:block;
+			}
+			.hero-big{
+				display:none;
+			}
+		}
 	}
 	.hero-overlay{
 		display:block;
 		position:absolute;
 		top:200px;
+  		padding-left:0;
+  		padding-right:0;
+
 		.title {
 			display:block;
 			position:relative;
@@ -63,6 +86,15 @@ html {
 			font-size:16px;
 			max-width:360px;
 		}
+		@include media($mobile) {
+      		padding-left:5%;
+      		padding-right:5%;
+    	}
+		@include media($tablet) {
+      		padding-left:25%;
+      		padding-right:5%;
+      		top:400px;
+    	}
 	}
 	header{
 		position:absolute;
@@ -76,7 +108,7 @@ html {
 			@include outer-container;
 			line-height: 60px;
 			height:60px;
-			// border:1px solid grey;
+			padding-left:0;
 			.envoy-logo {
 				display:block;
 				float:left;
@@ -84,11 +116,19 @@ html {
 				img{
 					vertical-align:middle;
 				}
+				@include media($mobile) {
+					padding-left:5%;
+					margin-right:0;
+				}
+				@include media($tablet) {
+					padding-left:5%;
+					margin-right:0;
+				}
 			}
 
 			nav{
 				margin-top:7px;
-				display:inline-block;;
+				display:inline-block;
 				a{
 					color:#ffffff;
 					text-decoration: none;
@@ -98,6 +138,13 @@ html {
 				a:hover{
 					color:$envoyred;
 				}
+				@include media($mobile) {
+					display:none;
+				}
+				@include media($tablet) {
+					display:none;
+				}
+
 			}
 			
 			.tweet-con {
@@ -132,6 +179,13 @@ html {
 
 					}
 				}
+
+				@include media($mobile) {
+					display:none;
+				}
+				@include media($tablet) {
+					display:none;
+				}
 			}
 		}
 
@@ -142,7 +196,22 @@ html {
 		@include bigBold;
 		padding-top:55px;
 		padding-bottom:30px;
+		padding-left:0;
+      	padding-right:0;
 		border-bottom:6px solid #272727;
+
+	 	@include media($mobile) {
+	 		font-size:28px;
+	 		line-height: 28px;
+      		padding-left:5%;
+      		padding-right:5%;
+    	}
+    	@include media($tablet) {
+	 		font-size:28px;
+	 		line-height: 28px;
+      		padding-left:5%;
+      		padding-right:5%;
+    	}
 	}
 
 }
@@ -154,6 +223,8 @@ html {
 	position:relative;
 	padding-top:70px;
 	padding-bottom:30px;
+	padding-left:0;
+    padding-right:0;
 	margin-bottom:20px;
 	border-bottom:1px solid #272727;
 	.title{
@@ -161,6 +232,14 @@ html {
 	}
 	.sub {
 		@include sectionHeadSub;
+	}
+	@include media($mobile) {
+  		padding-left:5%;
+      	padding-right:5%;
+	}
+	@include media($tablet) {
+  		padding-left:5%;
+      	padding-right:5%;
 	}
 }
 .main-container {
@@ -186,8 +265,22 @@ html {
 	  // font-size: 0.78em;
 	  // height: 18em;
 	  // margin-top: 2em;
-	  @include span-columns(4);
-	  @include omega(4n);
+	  	padding-left:0;
+      	padding-right:0;
+		@include span-columns(4);
+	 	@include omega(4n);
+	 	@include media($mobile) {
+      		@include span-columns(4);
+      		padding-left:5%;
+      		padding-right:5%;
+      		margin-bottom:40px;
+    	}
+	 	@include media($tablet) {
+      		@include span-columns(4);
+      		padding-left:5%;
+      		padding-right:5%;
+      		margin-bottom:40px;
+    	}
 	}
 }
 .news-area{
@@ -195,8 +288,14 @@ html {
 	  // font-size: 0.78em;
 	  // height: 18em;
 	  // margin-top: 2em;
-	  @include span-columns(4);
-	  @include omega(4n);
+	 	@include span-columns(4);
+	 	@include omega(4n);
+	 	@include media($mobile) {
+      		@include span-columns(4);
+    	}
+	 	@include media($tablet) {
+      		@include span-columns(4);
+    	}
 	}
 }
 .news-area {
@@ -206,6 +305,18 @@ html {
 	display:block;
 	position: relative;
 	margin-bottom: 18px;
+	margin-left:0;
+	margin-right:0;
+ 	@include media($mobile) {
+ 		width:100%;
+ 		margin-left: auto;
+ 		margin-right: auto;
+	}
+	@include media($tablet) {
+ 		width:100%;
+ 		margin-left: auto;
+ 		margin-right: auto;
+	}
 }
 .feature-title, .feature-accent, .feature-descr, .news-title{
 	font-family:$bigboldfamily;
@@ -218,6 +329,13 @@ html {
 	letter-spacing: -1.6px;
 	font-size:36px;
 	line-height:34px;
+	@include media($mobile) {
+		padding-bottom:5px;
+	}
+	@include media($tablet) {
+		padding-bottom:5px;
+	}
+
 }
 .news-title.accent {
 	color:$envoyaccent;
@@ -228,6 +346,10 @@ html {
 .feature-descr, .feature-view-more,.news-date{
 	font-size:13px;
 	color:#9f9f9f;
+}
+.news-date{
+	display:block;
+	padding-top:5px;
 }
 .feature-descr{
 	position:relative;

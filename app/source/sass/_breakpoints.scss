@@ -1,3 +1,19 @@
 // Define your Site Breakpoints here
-
+//$mobile < 500px
 //$tablet : 768px; example
+$mobile: new-breakpoint(max-width 500px 4);
+$tablet: new-breakpoint(max-width 768px 4);
+// Breakpoints
+/*
+$sm_val:  480px;
+$md_val:  640px;
+$lg_val:  800px;
+$xl_val:  1000px;
+$xxl_val: 1400px;
+
+$sm:  new-breakpoint(min-width $sm_val 6);
+$md:  new-breakpoint(min-width $md_val 7);
+$lg:  new-breakpoint(min-width $lg_val 8);
+$xl:  new-breakpoint(min-width $xl_val 9);
+$xxl: new-breakpoint(min-width $xxl_val 10);
+*/

@@ -12,7 +12,8 @@
     <body>
         <section class="main-container">
             <div class="hero-img">
-                <img src="images/django-hero.jpg">
+                <img src="images/django-hero.jpg" class="hero-big">
+                <img src="images/django-mob.jpg" class="hero-mob">
             </div>
             <section>
                 <div class="hero-overlay">
@@ -38,6 +39,9 @@
                         <div class="plusbox"><img src="images/plus.png"></div>
                     </div>
                 </div>
+                <span class="js-menu-trigger sliding-panel-button">
+                  menu
+                </span>
             </header>
 
             <section>
@@ -93,8 +97,20 @@
                     </div>
                 </section>
             </section>
+            <nav class="js-menu sliding-panel-content">
+              <ul>
+                <li><a href="javascript:void(0)">Work</a></li>
+                <li><a href="javascript:void(0)">Services</a></li>
+                <li><a href="javascript:void(0)">Ventures</a></li>
+                <li><a href="javascript:void(0)">About</a></li>
+                <li><a href="javascript:void(0)">Contact</a></li>
+                <li><a href="javascript:void(0)">Blog</a></li>
+              </ul>
+            </nav>
 
+            <div class="js-menu-screen sliding-panel-fade-screen"></div>
         </section>
+        <script   src="https://code.jquery.com/jquery-2.2.2.min.js"   integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="   crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 
         <script src="Scripts/custom/compiled.min.js"></script>
