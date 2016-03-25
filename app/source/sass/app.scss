@@ -1,0 +1,193 @@
+// Third Party Libraries
+@import "bourbon/app/assets/stylesheets/bourbon";
+@import "neat/app/assets/stylesheets/neat";
+
+@import "compass";
+@import "breakpoint";
+
+// Reset - Normalize is what we use.
+//@import "reset";
+
+@import "normalize-scss/normalize";
+
+// Partial Files
+@import "breakpoints";
+@import "variables";
+@import "mixins";
+
+// Write your Styles below REPLACE THE BELOW STYLES
+
+html {
+	color:#fff;
+	background-color: #1d1d1d;
+}
+
+.main-container {
+	// border:3px solid green;
+	@include outer-container(100%);
+
+
+	.hero-img {
+		background-color: #fff;
+		top:0;
+		// 
+		img{
+			max-height: 100%;
+			display:block;
+			position:relative;
+			margin:0 auto;
+		}
+	}
+	header{
+		position:absolute;
+		top:0;
+		height: 60px;
+		width:100%;
+		opacity:1;
+		background-color:rgba(0,0,0,0.8);
+
+		.header-content{
+			@include outer-container;
+			line-height: 60px;
+			height:60px;
+			// border:1px solid grey;
+			.envoy-logo {
+				display:block;
+				float:left;
+				margin-right:25px;
+				img{
+					vertical-align:middle;
+				}
+			}
+
+			nav{
+				margin-top:7px;
+				display:inline-block;;
+				a{
+					color:#ffffff;
+					text-decoration: none;
+					font-size: 13px;
+					margin-right: 20px;
+				}
+				a:hover{
+					color:$envyorred;
+				}
+			}
+			
+			.tweet-con {
+				background-color: #464646;
+				display:block;
+				position:relative;
+				// right:0;
+				float:right;
+				width:200px;
+				height:40px;
+				top:20px;
+				line-height: 40px;
+
+				img{
+					display:inline-block;
+					vertical-align:middle;
+				}
+				span {
+				
+					color:#67d9da;
+					font-size:13px;
+				 	display: inline-block;
+				  	// vertical-align: middle;
+				  	// line-height: normal;      
+				}
+				.plusbox{
+					width:40px;
+					height:40px;
+					background-color: $envyorred;
+					float:right; 
+					img{
+
+					}
+				}
+			}
+		}
+
+	}
+	.lead-par{
+		display:block;
+		position:relative;
+		@include bigBold;
+		padding-top:55px;
+		padding-bottom:30px;
+		border-bottom:6px solid #272727;
+	}
+
+}
+.red {
+	color:$envyorred;
+}
+.section-title-head{
+	display:block;
+	position:relative;
+	padding-top:70px;
+	padding-bottom:30px;
+	margin-bottom:20px;
+	border-bottom:1px solid #272727;
+	.title{
+		@include sectionHeadTitle;
+	}
+	.sub {
+		@include sectionHeadSub;
+	}
+}
+.main-container {
+	*zoom: 1;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.main-container:before, .main-container:after {
+	content: " ";
+	display: table;
+}
+
+.main-container:after {
+	clear: both;
+}
+//default
+section {
+  @include outer-container;
+  // border:1px solid silver;
+
+  aside {
+  	border:1px solid orange;
+    @include span-columns(3);
+  }
+  article {
+  	// border:1px solid pink;
+    @include span-columns(9);
+  }
+}
+
+/*
+section {
+  @include outer-container;
+  aside {
+    @include span-columns(3);
+    @include media($mobile) {
+      @include span-columns(4);
+    }
+  }
+  article {
+    @include span-columns(9);
+    @include media($mobile) {
+      @include span-columns(4);
+    }
+  }
+}
+
+*/
+//test
+// @include outer-container;
+// 	.primary { @include span-columns(8); }
+// 	.secondary { @include span-columns(4); }
+// }

@@ -1,0 +1,24 @@
+// Mixins
+
+@mixin bigBold() {
+	font-family: $bigboldfamily;
+	font-size: 36px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;//500;
+	line-height: 36px;
+	letter-spacing: -0.4px;
+}
+
+@mixin sectionHeadTitle(){
+	font-family: $bigboldfamily;
+	font-weight: bold;
+	font-size:22px;
+	color:#9f9f9f;
+}
+
+@mixin sectionHeadSub() {
+	font-family: $bigboldfamily;
+	font-size:13px;
+	color:$envyorred;
+}
