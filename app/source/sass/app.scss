@@ -37,6 +37,32 @@ html {
 			position:relative;
 			margin:0 auto;
 		}
+
+	}
+	.hero-overlay{
+		display:block;
+		position:absolute;
+		top:200px;
+		.title {
+			display:block;
+			position:relative;
+			line-height:50px;
+			font-family: $heroTitleFamily;
+			font-size:50px;
+			text-transform: uppercase;
+			color:$heroblood;
+			font-weight:700;
+			letter-spacing: -0.8px;
+			max-width:235px;
+		}
+		.text{
+			display:block;
+			margin-top:20px;
+			font-family: $heroTextFamily;
+			color:#9f9f9f;
+			font-size:16px;
+			max-width:360px;
+		}
 	}
 	header{
 		position:absolute;
@@ -70,7 +96,7 @@ html {
 					margin-right: 20px;
 				}
 				a:hover{
-					color:$envyorred;
+					color:$envoyred;
 				}
 			}
 			
@@ -100,7 +126,7 @@ html {
 				.plusbox{
 					width:40px;
 					height:40px;
-					background-color: $envyorred;
+					background-color: $envoyred;
 					float:right; 
 					img{
 
@@ -121,7 +147,7 @@ html {
 
 }
 .red {
-	color:$envyorred;
+	color:$envoyred;
 }
 .section-title-head{
 	display:block;
@@ -153,6 +179,67 @@ html {
 .main-container:after {
 	clear: both;
 }
+
+
+.feature-area , .news-area{
+	div.box {
+	  // font-size: 0.78em;
+	  // height: 18em;
+	  // margin-top: 2em;
+	  @include span-columns(4);
+	  @include omega(4n);
+	}
+}
+.news-area{
+	div.box {
+	  // font-size: 0.78em;
+	  // height: 18em;
+	  // margin-top: 2em;
+	  @include span-columns(4);
+	  @include omega(4n);
+	}
+}
+.news-area {
+	margin-bottom: 60px;
+}
+.feature-img {
+	display:block;
+	position: relative;
+	margin-bottom: 18px;
+}
+.feature-title, .feature-accent, .feature-descr, .news-title{
+	font-family:$bigboldfamily;
+	font-size: 18px;
+	font-weight: bold;
+	color:#fff;
+}
+.news-title{
+	width:100%;
+	letter-spacing: -1.6px;
+	font-size:36px;
+	line-height:34px;
+}
+.news-title.accent {
+	color:$envoyaccent;
+}
+.feature-accent{
+	color:$envoyaccent;
+}
+.feature-descr, .feature-view-more,.news-date{
+	font-size:13px;
+	color:#9f9f9f;
+}
+.feature-descr{
+	position:relative;
+	display:block;
+	margin-top:6px;
+	line-height:16px;
+}
+.feature-view-more, .read-more{
+	margin-top:13px;
+	color:$envoyred;
+}
+
 //default
 section {
   @include outer-container;
