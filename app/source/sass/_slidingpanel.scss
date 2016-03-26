@@ -99,7 +99,7 @@
   }
 
   @include media($desktop) {
-    display:none;
+    display:block;
   }
 
 }

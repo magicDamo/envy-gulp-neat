@@ -65,12 +65,14 @@ section {
 		height:60px;
 		bottom:20px;
 		.balanced{
+			position: relative;
+			top:20px;
 			right:0;
 			width:auto;
 			.dots-con{
 				display: inline-block;
 				position: relative;
-				top:35px;
+				top:15px;
 				left:0;
 				margin-left: 5%;
 				width:100px;
@@ -92,7 +94,7 @@ section {
 			.arrow-con{
 				display:inline-block;
 				float:right;
-				margin-right:5%px;
+				margin-right:5%;
 				.ar, .al {
 					display: inline-block;
 					width:17px;
@@ -235,7 +237,7 @@ header{
   		@include span-columns(12);
   		padding-left:5%;
   		padding-right:5%;
-  		padding-top:25px;
+  		padding-top:15px;
   		margin-bottom:40px;
   		border-top:1px solid #272727;
 	}
@@ -385,6 +387,7 @@ header{
 		.hero-nav{
 			.balanced {
 				.dots-con{
+					top:10px;
 					margin-left: 42%;
 					
 				}	
