@@ -68,9 +68,6 @@
 .sliding-panel-button {
   // display:inline-block;
 
-  display:none; //REMOVE!
-
-
   position:absolute;
   top:12px;
   right:5%;
@@ -99,9 +96,7 @@
   }
 
   @include media($desktop) {
-    display:block;
+    display:none;
   }
 
 }
-
-// Based on code by Diego Eis
